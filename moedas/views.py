@@ -13,10 +13,10 @@ def home(request):
             'valor': cotacao_usd_eur_btc,
             'valor_real': real_to_dollar(valor_real),
         }
-        return render(request, 'usd/home.html', context)
+        return render(request, 'moedas/pages/home.html', context)
 
     else:
         context = {
             'valor': cotacao_usd_eur_btc,
         }
-        return render(request, 'usd/home.html', context)
+        return render(request, 'moedas/pages/home.html', context)

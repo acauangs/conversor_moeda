@@ -1,6 +1,3 @@
-import json
-from turtle import onclick
-
 import requests
 
 # API  USD-BRL,EUR-BRL,BTC-BRL
