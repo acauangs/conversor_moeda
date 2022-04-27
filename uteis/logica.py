@@ -69,6 +69,6 @@ def real_to_btc(real):
     real = float(real)
     if real:
         real = real / one_btc
-        return "%.2f" % real
+        return real
     else:
         return f'Ops.. Algo inesperado ocorreu tente novamente mais tarde :c'
