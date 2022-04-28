@@ -23,9 +23,6 @@ usd_low = "%.2f" % usd_low
 eur = "%.2f" % eur
 eur_high = "%.2f" % eur_high
 eur_low = "%.2f" % eur_low
-btc = "%.2f" % btc
-btc_high = "%.2f" % btc_high
-btc_low = "%.2f" % btc_low
 
 
 def cotacao_usd_eur_btc():
@@ -45,30 +42,27 @@ def cotacao_usd_eur_btc():
 
 
 def real_to_dollar(real):
-    one_usd = float(cotacoes["USDBRL"]["bid"])
     real = float(real)
     if real:
-        real = real / one_usd
+        real = real / float(usd)
         return "%.2f" % real
     else:
         return f'Ops.. Algo inesperado ocorreu tente novamente mais tarde :c'
 
 
 def real_to_euro(real):
-    one_eur = float(cotacoes['EURBRL']["bid"])
     real = float(real)
     if real:
-        real = real / one_eur
+        real = real / float(eur)
         return "%.2f" % real
     else:
         return f'Ops.. Algo inesperado ocorreu tente novamente mais tarde :c'
 
-
-def real_to_btc(real):
-    one_btc = float(cotacoes['BTCBRL']["bid"])
+# Em projeto
+# def real_to_btc(real):
     real = float(real)
     if real:
-        real = real / one_btc
+        real = real / float(btc) + .01
         return real
     else:
         return f'Ops.. Algo inesperado ocorreu tente novamente mais tarde :c'

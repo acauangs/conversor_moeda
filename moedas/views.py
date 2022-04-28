@@ -19,7 +19,7 @@ def converter_usd(request):
     if valor_real:
         context = {
             'valor_real': real_to_dollar(valor_real),
-            'dollar': 'UDS:'
+            'dollar': 'USD:'
         }
         return render(request, 'moedas/pages/converter_usd.html', context)
 
@@ -38,7 +38,7 @@ def converter_eur(request):
     return render(request, 'moedas/pages/converter_eur.html')
 
 
-def converter_btc(request):
+# def converter_btc(request): Projeto para converter BTC
     valor_real = request.GET.get('q')
     if valor_real:
         context = {
