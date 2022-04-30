@@ -57,7 +57,9 @@ ROOT_URLCONF = 'conversor.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'moedas/templates/moedas/base_template',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

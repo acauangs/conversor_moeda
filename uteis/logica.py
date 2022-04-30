@@ -2,11 +2,12 @@ import requests
 
 # API  USD-BRL,EUR-BRL,BTC-BRL
 
+# Pega os dados da API
 cotacoes = requests.get(
     'https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL')
 cotacoes = cotacoes.json()
 
-
+# Converter valores de str para float
 usd = float(cotacoes["USDBRL"]["bid"])
 usd_high = float(cotacoes["USDBRL"]["high"])
 usd_low = float(cotacoes["USDBRL"]["low"])
@@ -17,6 +18,7 @@ btc = float(cotacoes['BTCBRL']["bid"])
 btc_high = float(cotacoes["BTCBRL"]["high"])
 btc_low = float(cotacoes["BTCBRL"]["low"])
 
+# Usar somente dois digitos após a virgula
 usd = "%.2f" % usd
 usd_high = "%.2f" % usd_high
 usd_low = "%.2f" % usd_low

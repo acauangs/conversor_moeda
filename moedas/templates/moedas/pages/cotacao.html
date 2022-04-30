@@ -1,16 +1,21 @@
-<html lang="pt-BR">
-<head>
-<title>Cotação</title>
-    {% include 'moedas/partials/head.html' %}
-</head>
+{% extends 'base.html' %}
 
-<body>
+{% block title %}Cotação Atual{% endblock %}
+        
+{% block header %}
+    <h1>Cotação Atual Principais Moedas</h1>
+{% endblock header %}
+
+
+{% block content %}
     {% include 'moedas/partials/cotacao.html' %}
+{% endblock content %}
+
+
+{% block choices %}
     {% include 'moedas/partials/opcoes.html' %}
-</body>
+{% endblock choices %}
 
-
-<footer>
-    {% include 'moedas/partials/footer.html' %}
-</footer>
-</html>
+{% block footer %}
+        {% include 'moedas/partials/footer.html' %}
+{% endblock footer %}

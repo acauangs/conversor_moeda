@@ -1,21 +1,20 @@
-<html lang="pt-BR">
-<head>
-    <title>BRL to USD</title>
-    {% include 'moedas/partials/head.html' %}
-</head>
+{% extends 'base.html' %}
 
-<body>
-    <div class="content-cotacao">
-        <h1>Converta Real para Dollar</h1>
-        {% include 'moedas/partials/converter.html' %}
-    </div>
-    <div class="opcao">
-        <a href="{% url 'cotacao' %}"<div class="op-eur">Voltar</div></a>
-    </div>
-</body>
+{% block title %}BRL to USD{% endblock %}
+        
+{% block header %}
+    <h1>Converta Real para Dollar</h1>
+{% endblock header %}
 
-<footer>
-    {% include 'moedas/partials/footer.html' %}
-</footer>
 
-</html>
+{% block content %}
+    {% include 'moedas/partials/converter.html' %}
+{% endblock content %}
+
+{% block choices %}
+    <div class="op-elementos"><a href="{% url 'cotacao' %}">Voltar</a></div>
+{% endblock choices %}
+
+{% block footer %}
+        {% include 'moedas/partials/footer.html' %}
+{% endblock footer %}

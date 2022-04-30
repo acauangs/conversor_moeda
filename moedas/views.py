@@ -19,7 +19,7 @@ def converter_usd(request):
     if valor_real:
         context = {
             'valor_real': real_to_dollar(valor_real),
-            'dollar': 'USD:'
+            'dollar': 'USD: $ '
         }
         return render(request, 'moedas/pages/converter_usd.html', context)
 
@@ -31,7 +31,7 @@ def converter_eur(request):
     if valor_real:
         context = {
             'valor_real': real_to_euro(valor_real),
-            'euro': 'EUR'
+            'euro': 'EUR: € '
         }
         return render(request, 'moedas/pages/converter_eur.html', context)
 

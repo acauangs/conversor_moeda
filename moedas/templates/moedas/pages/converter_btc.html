@@ -1,25 +1,23 @@
-{% extends 'moedas/partials/head.html' %}
-<html lang="pt-BR">
-<head>
-    <title>BRL to BTC</title>
-    {% block titulo %}
-        <h1>Converter Real para BitCoin</h1>
-    {% endblock titulo %}
-    {% include 'moedas/partials/head.html' %}
-</head>
+{% extends 'base.html' %}
 
-<body>
-    <div class="content-cotacao">
-        <h1>Converta Real para Bitcoin</h1>
+{% block title %}BRL to BTC{% endblock %}
+        
+{% block header %}
+    <h1>Converta Real para Bitcoin</h1>
+{% endblock header %}
+
+
+{% block content %}
+
         {% include 'moedas/partials/converter.html' %}
-    </div>
-    <div class="opcao">
-        <a href="{% url 'cotacao' %}"<div class="op-eur">Voltar</div></a>
-    </div>
-</body>
 
-<footer>
-    {% include 'moedas/partials/footer.html' %}
-</footer>
+{% endblock content %}
 
-</html>
+
+{% block choices %}
+    <div class="op-elementos"><a href="{% url 'cotacao' %}">Voltar</a></div>
+{% endblock choices %}
+
+{% block footer %}
+        {% include 'moedas/partials/footer.html' %}
+{% endblock footer %}

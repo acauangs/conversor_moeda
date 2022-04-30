@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="{% static '/CSS/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
+    
+<title>{% block title %} {% endblock %}</title>
+
+
+<div class="bar-header-footer">
+    {% block header %}
+        
+    {% endblock header %}
+</div>
+
+<div class="content-cotacao">
+    {% block content %}
+        
+    {% endblock content %}
+</div>
+
+<div class="opcao">
+    {% block choices %}
+        
+    {% endblock choices %}
+</div>
+
+<div class="bar-header-footer">
+    {% block footer %}
+        
+    {% endblock footer %}
+</div>
+
